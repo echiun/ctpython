@@ -1,0 +1,25 @@
+import random
+r= random.randint(1,100)
+max=100
+min=1
+print(r)
+i=0
+
+while i<5:
+    i += 1
+    guess = int(input('第{0}次 . 猜一個數字'.format(i)))
+    if i ==5:
+        if guess == r:
+            print("恭喜猜對了")
+        else:
+            print("銘謝惠顧")
+    else:  
+        if guess >r:
+            max=guess
+            print("請在{0}~{1}之間輸入一個數字".format(min, max))
+        elif guess <r:
+            min = guess
+            print("請在{0}~{1}之間輸入一個數字".format(min, max))
+        elif guess == r :
+            print("恭喜猜對了")
+            break
